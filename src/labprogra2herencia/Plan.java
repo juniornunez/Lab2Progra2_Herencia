@@ -8,6 +8,32 @@ package labprogra2herencia;
  *
  * @author Junior Nuñes
  */
-public class Plan {
-    
+    public abstract class Plan {
+
+    private String numeroTel;
+    private String nombre;
+
+    public Plan(String numeroTel, String nombre) {
+        this.numeroTel = numeroTel;
+        this.nombre = nombre;
+    }
+
+    public String getNumeroTel() {
+        return numeroTel;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public abstract double pagoMensual(int mins, int msgs);
+
+    public void imprimir() {
+        System.out.println("Número de Teléfono: " + numeroTel);
+        System.out.println("Nombre: " + nombre);
+    }
+
+    public String toString() {
+        return "Número de Teléfono: " + numeroTel + "\nNombre: " + nombre;
+    }
 }
